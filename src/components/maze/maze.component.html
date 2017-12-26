@@ -1,0 +1,38 @@
+<div ng-if="$ctrl.maze" class="maze">
+
+    <ul class="options">
+        <li class="title">
+            {{$ctrl.appLanguage.options}}
+        </li>
+        <li class="option" ui-sref="{{$ctrl.appStates.COLOR_PICKER}}">
+            {{$ctrl.appLanguage.selectColors}}
+        </li>
+        <li class="option"
+            ng-class="{'selected': $ctrl.mazeOptions.selectStartPosition === $ctrl.currentMazeOption}"
+            ng-click="$ctrl.onOptionSelected($ctrl.mazeOptions.selectStartPosition)">
+            {{$ctrl.appLanguage.start}}
+        </li>
+        <li class="option"
+            ng-class="{'selected': $ctrl.mazeOptions.selectEndPosition === $ctrl.currentMazeOption}"
+            ng-click="$ctrl.onOptionSelected($ctrl.mazeOptions.selectEndPosition)">
+            {{$ctrl.appLanguage.end}}
+        </li>
+        <li class="option"
+            ng-class="{'selected': $ctrl.mazeOptions.go === $ctrl.currentMazeOption}"
+            ng-click="$ctrl.onOptionSelected($ctrl.mazeOptions.go)">
+            {{$ctrl.appLanguage.go}}
+        </li>
+    </ul>
+
+
+    <table>
+        <tr ng-repeat="raw in $ctrl.matrix">
+            <td ng-repeat="cell in raw"
+                ng-style="$ctrl.getCellStyle(cell)"
+                ng-click="$ctrl.onCellClick(cell)">
+                {{cell.content}}
+            </td>
+        </tr>
+    </table>
+
+</div>

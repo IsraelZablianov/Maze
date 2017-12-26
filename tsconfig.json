@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "typeRoots": [
+      "node_modules/@types/**/*.d.ts"
+    ],
+    "target": "es5",
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "watch": true,
+    "noImplicitAny": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

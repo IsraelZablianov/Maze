@@ -1,0 +1,46 @@
+<div class="color-picker">
+    <h1>Maze Colors</h1>
+
+    <form class="container">
+
+        <div class="color-selection-titles">
+            <span class="color-hint">{{$ctrl.appLanguage.colorA + ' - ' + $ctrl.regularColor}}</span>
+            <span class="color-hint">{{$ctrl.appLanguage.colorB + ' - ' + $ctrl.forbiddenColor}}</span>
+            <span class="color-hint">{{$ctrl.appLanguage.colorC + ' - ' + $ctrl.routeColor}}</span>
+        </div>
+
+        <div class="color-selection-body">
+            <div class="color-select-item">
+                <label>{{$ctrl.appLanguage.colorA + ' (' + $ctrl.appLanguage.regular + ')'}}</label>
+                <input colorpicker type="text"
+                       ng-change="$ctrl.isValidHex()"
+                       ng-model="$ctrl.regularColor" />
+            </div>
+            <div class="color-select-item">
+                <label>{{$ctrl.appLanguage.colorB + ' (' + $ctrl.appLanguage.forbidden + ')'}}</label>
+                <input colorpicker type="text"
+                       ng-model="$ctrl.forbiddenColor"
+                       ng-change="$ctrl.isValidHex()"/>
+            </div>
+            <div class="color-select-item">
+                <label>{{$ctrl.appLanguage.colorC + ' (' + $ctrl.appLanguage.route + ')'}}</label>
+                <input colorpicker type="text"
+                       ng-model="$ctrl.routeColor"
+                       ng-change="$ctrl.isValidHex()"/>
+            </div>
+        </div>
+
+        <div class="color-selection-bottom">
+            <button  class="color-selection-save"
+                ng-class="{'disabled': !$ctrl.isValidColors}"
+                ng-disabled="!$ctrl.isValidColors"
+                ng-click="$ctrl.save()">
+                {{$ctrl.appLanguage.save}}
+            </button >
+
+            <div ng-hide="$ctrl.isValidColors" class="color-selection-requirements">
+                {{$ctrl.appLanguage.invalisColorMsg}}*
+            </div>
+        </div>
+    </form>
+</div>

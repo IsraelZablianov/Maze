@@ -1,0 +1,20 @@
+{
+  "name": "maze-israel.z",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Israel Z",
+  "license": "ISC",
+  "dependencies": {
+    "@types/angular": "^1.6.29",
+    "@types/angular-ui-router": "^1.1.37",
+    "@types/jquery": "^3.2.11",
+    "@types/node": "^8.0.22",
+    "angular": "^1.6.5",
+    "angular-bootstrap-colorpicker": "^3.0.31",
+    "angular-ui-router": "^1.0.3",
+    "javascript-astar": "^0.4.1",
+    "jquery": "^3.2.1",
+    "typescript": "^2.4.2"
+  }
+}
