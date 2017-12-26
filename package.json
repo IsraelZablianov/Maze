@@ -1,10 +1,13 @@
 {
   "name": "maze-israel.z",
   "version": "1.0.0",
-  "description": "",
+  "description": "creating a simple maze app (using _references.d.ts before I learned webpack)",
   "main": "index.js",
   "author": "Israel Z",
   "license": "ISC",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
   "dependencies": {
     "@types/angular": "^1.6.29",
     "@types/angular-ui-router": "^1.1.37",
@@ -15,6 +18,10 @@
     "angular-ui-router": "^1.0.3",
     "javascript-astar": "^0.4.1",
     "jquery": "^3.2.1",
-    "typescript": "^2.4.2"
+    "typescript": "^2.4.2",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.9.7"
   }
 }
