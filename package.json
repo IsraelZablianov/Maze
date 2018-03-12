@@ -16,8 +16,10 @@
     "angular": "^1.6.5",
     "angular-bootstrap-colorpicker": "^3.0.31",
     "angular-ui-router": "^1.0.3",
+    "css-loader": "^0.28.10",
     "javascript-astar": "^0.4.1",
     "jquery": "^3.2.1",
+    "style-loader": "^0.20.3",
     "typescript": "^2.4.2",
     "webpack": "^3.11.0"
   },
