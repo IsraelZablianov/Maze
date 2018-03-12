@@ -42,11 +42,3 @@ app.component("colorPicker", {
     bindings: {
     }
 });
-
-
-app.component("success", {
-    controller: SuccessController,
-    templateUrl: "src/components/success/success.component.html",
-    bindings: {
-    }
-});

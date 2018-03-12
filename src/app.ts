@@ -1,5 +1,7 @@
 declare var angular: any;
 import { StateNames, SuccessStateParams } from "../src/constants/state-names";
+declare var require: any;
+require("angular-bootstrap-colorpicker/css/colorpicker.css");
 
 const settings = Object.freeze({
     appName: "Maze"
