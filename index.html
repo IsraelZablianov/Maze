@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <title>Maze Israel.Z</title>
 
-    <!--External-->
-    <link rel="stylesheet" href="node_modules/angular-bootstrap-colorpicker/css/colorpicker.css">
-
     <!--Custom-->
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="src/components/maze/maze.component.css">
@@ -16,12 +13,9 @@
 </head>
 <body>
     <div class="app" ui-view></div>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/angular/angular.js"></script>
-    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="node_modules/angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.js"></script>
-    <script src="node_modules/javascript-astar/astar.js"></script>
-    <script src="./dist/index.js"></script>
+
+    <script src="./dist/vendors.js"></script>
+    <script src="./dist/app.js"></script>
 
     <!--Custom Files-->
     <script src="src/models.js"></script>

@@ -2,11 +2,15 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './src/app.ts',
+  entry: {
+    app: './src/app.ts',
+    vendors: ['jquery', 'angular', 'angular-ui-router', 'angular-bootstrap-colorpicker', 'javascript-astar']
+  
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/assets/',
-    filename: 'index.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -16,6 +20,10 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
       },
       {
         test: /\.less$/,
