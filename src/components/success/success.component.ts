@@ -1,5 +1,6 @@
 import app from "../../app";
 import { SuccessStateParams, StateNames } from "../../constants/state-names";
+import { IAppLanguage, AppLanguage } from "../../Languages/index";
 interface ISuccessController {
 }
 
@@ -14,7 +15,7 @@ class SuccessController implements ISuccessController {
     get appLanguage(): IAppLanguage {
         return AppLanguage;
     }
-    get appStates(): Map {
+    get appStates() {
         return StateNames;
     }
 

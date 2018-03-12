@@ -4,13 +4,36 @@ var webpack = require('webpack');
 module.exports = {
   entry: {
     app: './src/app.ts',
-    vendors: ['jquery', 'angular', 'angular-ui-router', 'angular-bootstrap-colorpicker', 'javascript-astar']
-  
+    vendors: ['jquery', 'angular', 'angular-ui-router', 'angular-bootstrap-colorpicker'],
+    custom: ["./src/models.ts", 
+    "./src/types/astar.ts", 
+    "./src/app.ts", 
+    "./src/constants/css-style-properties.ts",
+    "./src/constants/services-names.ts",
+    "./src/constants/state-names.ts", 
+    "./src/Languages/en-us.ts", 
+    "./src/Languages/index.ts",
+    "./src/components/maze/maze.component.ts",
+    "./src/components/color-picker/color-picker.component.ts",
+    "./src/components/success/success.component.ts",
+    "./src/services/a-star-algo/a-star-algo.service.ts",
+    "./src/services/color/color.service.ts",
+    "./src/services/time-queue/time-queue.service.ts",
+    "./src/services/success/success.service.ts"]
   },
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/assets/',
     filename: '[name].js'
+  },
+  resolve: {
+      alias: {
+      'astar': 'node_modules/javascript-astar/astar.js'
+    },
+    modules: [
+      path.resolve('./'),
+      path.resolve('./node_modules'),
+    ]
   },
   module: {
     rules: [
@@ -23,7 +46,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.less$/,

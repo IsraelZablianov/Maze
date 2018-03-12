@@ -1,5 +1,5 @@
-///<reference path="../_references.d.ts"/>
-'use strict';
+import { StateNames, SuccessStateParams } from "../src/constants/state-names";
+require("angular-bootstrap-colorpicker/css/colorpicker.css");
 var settings = Object.freeze({
     appName: "Maze"
 });
@@ -25,4 +25,5 @@ app.config(["$stateProvider", "$urlRouterProvider",
         var _a;
     }
 ]);
+export default app;
 //# sourceMappingURL=app.js.map

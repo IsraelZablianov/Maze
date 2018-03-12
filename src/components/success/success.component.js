@@ -1,4 +1,5 @@
-///<reference path="../../../_references.d.ts"/>
+import app from "../../app";
+import { SuccessStateParams, StateNames } from "../../constants/state-names";
 var SuccessController = (function () {
     function SuccessController($state) {
         this.$state = $state;

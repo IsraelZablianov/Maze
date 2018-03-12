@@ -1,5 +1,9 @@
 import app from "../../app";
 import { ServicesNames } from "../../constants/services-names";
+import { IMaze, CellState, IPosition } from "../../models";
+declare var require: any;
+const Graph = require("javascript-astar/astar.js").Graph;
+const astar = require("javascript-astar/astar.js").astar;
 
 export interface IMazeAlgoService {
     findPath(maze :IMaze): IPosition[];

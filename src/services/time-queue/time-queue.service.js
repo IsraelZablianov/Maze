@@ -1,4 +1,5 @@
-///<reference path="../../../_references.d.ts"/>
+import app from "../../app";
+import { ServicesNames } from "../../constants/services-names";
 var TimeQueueService = (function () {
     function TimeQueueService($timeout) {
         this.$timeout = $timeout;
@@ -36,5 +37,6 @@ var TimeQueueService = (function () {
     TimeQueueService.$inject = ['$timeout'];
     return TimeQueueService;
 }());
+export { TimeQueueService };
 app.service(ServicesNames.TIME_QUEUE, TimeQueueService);
 //# sourceMappingURL=time-queue.service.js.map

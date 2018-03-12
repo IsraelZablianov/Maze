@@ -1,4 +1,7 @@
-///<reference path="../../../_references.d.ts"/>
+import app from "../../app";
+import { ServicesNames } from "../../constants/services-names";
+var Graph = require("javascript-astar/astar.js");
+var astar = require("javascript-astar/astar.js");
 var AStarAlgoService = (function () {
     function AStarAlgoService() {
     }
@@ -32,5 +35,6 @@ var AStarAlgoService = (function () {
     };
     return AStarAlgoService;
 }());
+export { AStarAlgoService };
 app.service(ServicesNames.A_STAR_ALGO, AStarAlgoService);
 //# sourceMappingURL=a-star-algo.service.js.map

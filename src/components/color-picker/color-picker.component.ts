@@ -2,6 +2,7 @@ import { ServicesNames } from "../../constants/services-names";
 import { StateNames } from "../../constants/state-names";
 import app from "../../app";
 import { IColorService } from "../../services/color/color.service";
+import { IAppLanguage, AppLanguage } from "../../Languages/index";
 
 interface IColorPickerController {
     save(): void;

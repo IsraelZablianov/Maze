@@ -6,12 +6,14 @@ import { IMazeAlgoService } from "../../services/a-star-algo/a-star-algo.service
 import { IColorService } from "../../services/color/color.service";
 import { ITimeQueueService } from "../../services/time-queue/time-queue.service";
 import { ISuccessService } from "../../services/success/success.service";
+import { AppLanguage, IAppLanguage } from "../../Languages/index";
+import { CellState, ICell, IPosition, MazeOption, IMaze } from "../../models";
 interface IMazeController {
     matrix: ICell[][];
-    mazeOptions: Map;
+    mazeOptions: any;
     appLanguage: IAppLanguage;
-    appStates: Map;
-    getCellStyle(cell: ICell): Map;
+    appStates: any;
+    getCellStyle(cell: ICell): any;
     onCellClick(cell: ICell): void;
     onOptionSelected(selectedOption: MazeOption): void;
 }
@@ -20,9 +22,9 @@ class MazeController implements IMazeController{
     static $inject: string[] = [ServicesNames.A_STAR_ALGO, ServicesNames.COLOR, ServicesNames.TIME_QUEUE, ServicesNames.SUCCESS];
     private maze: IMaze;
     private currentMazeOption: MazeOption;
-    private cellStyles: Map;
+    private cellStyles: any;
 
-    get mazeOptions(): Map {
+    get mazeOptions(): any {
         return MazeOption;
     }
     get appLanguage(): IAppLanguage {
@@ -31,7 +33,7 @@ class MazeController implements IMazeController{
     get matrix(): ICell[][] {
         return this.maze.matrix;
     }
-    get appStates(): Map {
+    get appStates(): any {
         return StateNames;
     }
 
@@ -156,7 +158,7 @@ class MazeController implements IMazeController{
         }
     }
 
-    getCellStyle(cell: ICell): Map {
+    getCellStyle(cell: ICell): any {
         if(cell && cell.cellState) {
             return this.cellStyles[cell.cellState];
         }

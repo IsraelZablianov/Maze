@@ -1,4 +1,5 @@
-///<reference path="../../../_references.d.ts"/>
+import app from "../../app";
+import { ServicesNames } from "../../constants/services-names";
 var ColorService = (function () {
     function ColorService() {
         this._regularColor = "#36ec51";
@@ -50,5 +51,6 @@ var ColorService = (function () {
     };
     return ColorService;
 }());
+export { ColorService };
 app.service(ServicesNames.COLOR, ColorService);
 //# sourceMappingURL=color.service.js.map

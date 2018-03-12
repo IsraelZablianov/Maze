@@ -1,4 +1,4 @@
-var CssStyleProperties = Object.freeze({
+export var CssStyleProperties = Object.freeze({
     BACKGROUND_COLOR: "background-color",
     HEIGHT: "height",
     WIDTH: "width"

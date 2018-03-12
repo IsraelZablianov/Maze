@@ -1,4 +1,3 @@
-///<reference path="../../../_references.d.ts"/>
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -7,6 +6,10 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
     }
     return t;
 };
+import app from "../../app";
+import { ServicesNames } from "../../constants/services-names";
+import { StateNames } from "../../constants/state-names";
+import { CssStyleProperties } from "../../constants/css-style-properties";
 var MazeController = (function () {
     function MazeController(mazeSolverAlgoService, colorService, timeService, successService) {
         this.mazeSolverAlgoService = mazeSolverAlgoService;

@@ -1,4 +1,6 @@
-interface IAppLanguage {
+import { ENUSMazeLanguage } from "./en-us";
+
+export interface IAppLanguage {
     end?: string,
     start?: string,
     go?: string,
@@ -21,4 +23,4 @@ interface IAppLanguage {
     jobEndedSuccessfullyMsg: (steps: number, formatedString: string) => string;
 }
 
-const AppLanguage: IAppLanguage = ENUSMazeLanguage;
+export const AppLanguage: IAppLanguage = ENUSMazeLanguage;

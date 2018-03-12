@@ -1,4 +1,6 @@
-///<reference path="../../../_references.d.ts"/>
+import { ServicesNames } from "../../constants/services-names";
+import { StateNames } from "../../constants/state-names";
+import app from "../../app";
 var ColorPickerController = (function () {
     function ColorPickerController(colorService, $state) {
         this.colorService = colorService;

@@ -1,4 +1,4 @@
-const ENUSMazeLanguage: IAppLanguage = Object.freeze({
+export const ENUSMazeLanguage = Object.freeze({
     end: "End",
     start: "Start",
     go: "Go",

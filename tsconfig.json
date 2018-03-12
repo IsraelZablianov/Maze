@@ -1,16 +1,17 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "typeRoots": [
-      "node_modules/@types/**/*.d.ts"
-    ],
-    "target": "es5",
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "watch": true,
-    "noImplicitAny": true
-  },
-  "exclude": [
-    "node_modules"
-  ]
+    "compilerOptions": {
+        "target": "es5", //defines what sort of code ts generates, es5 because it's what most browsers currently UNDERSTANDS.
+        "module": "es6",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true, //for angular to be able to use metadata we specify in our components.
+        "experimentalDecorators": true, //angular needs decorators like @Component, @Injectable, etc.
+        "removeComments": false,
+        "noImplicitAny": false,
+        "lib": [
+            "es2016",
+            "dom",
+            "es5"
+        ]
+    }
 }
