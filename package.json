@@ -1,8 +1,8 @@
 {
   "name": "maze-israel.z",
   "version": "1.0.0",
-  "description": "creating a simple maze app (using _references.d.ts before I learned webpack)",
-  "main": "index.js",
+  "description": "creating a simple maze app",
+  "main": "index.html",
   "author": "Israel Z",
   "license": "ISC",
   "scripts": {
@@ -19,9 +19,10 @@
     "javascript-astar": "^0.4.1",
     "jquery": "^3.2.1",
     "typescript": "^2.4.2",
-    "webpack": "^3.10.0"
+    "webpack": "^3.11.0"
   },
   "devDependencies": {
+    "ts-loader": "^3.5.0",
     "webpack-dev-server": "^2.9.7"
   }
 }

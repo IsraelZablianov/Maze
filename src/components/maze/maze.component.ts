@@ -1,5 +1,11 @@
-///<reference path="../../../_references.d.ts"/>
-
+import app from "../../app";
+import { ServicesNames } from "../../constants/services-names";
+import { StateNames } from "../../constants/state-names";
+import { CssStyleProperties } from "../../constants/css-style-properties";
+import { IMazeAlgoService } from "../../services/a-star-algo/a-star-algo.service";
+import { IColorService } from "../../services/color/color.service";
+import { ITimeQueueService } from "../../services/time-queue/time-queue.service";
+import { ISuccessService } from "../../services/success/success.service";
 interface IMazeController {
     matrix: ICell[][];
     mazeOptions: Map;

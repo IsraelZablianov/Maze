@@ -1,10 +1,13 @@
-///<reference path="../../../_references.d.ts"/>
+import app from "../../app";
+import { StateNames, SuccessStateParams } from "../../constants/state-names";
+import { ServicesNames } from "../../constants/services-names";
 
-interface ISuccessService {
+
+export interface ISuccessService {
     showSuccessPage(msg?: string): void;
 }
 
-class SuccessService implements ISuccessService {
+export class SuccessService implements ISuccessService {
     public static $inject: string[] = ['$state'];
     constructor(private $state: ng.ui.IStateService) {
 

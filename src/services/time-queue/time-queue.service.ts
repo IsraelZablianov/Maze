@@ -1,16 +1,17 @@
-///<reference path="../../../_references.d.ts"/>
+import app from "../../app";
+import { ServicesNames } from "../../constants/services-names";
 
-interface ITimeQueueService {
+export interface ITimeQueueService {
     add(callback: Function, delay: number): void;
     run(): void;
 }
 
-interface ITimeQueuedCallback {
+export interface ITimeQueuedCallback {
     callback: Function;
     delay: number;
 }
 
-class TimeQueueService implements ITimeQueueService {
+export class TimeQueueService implements ITimeQueueService {
     public static $inject: string[] = ['$timeout'];
 
     queue :ITimeQueuedCallback[] = [];

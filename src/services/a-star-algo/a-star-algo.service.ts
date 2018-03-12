@@ -1,10 +1,11 @@
-///<reference path="../../../_references.d.ts"/>
+import app from "../../app";
+import { ServicesNames } from "../../constants/services-names";
 
-interface IMazeAlgoService {
+export interface IMazeAlgoService {
     findPath(maze :IMaze): IPosition[];
 }
 
-class AStarAlgoService implements IMazeAlgoService {
+export class AStarAlgoService implements IMazeAlgoService {
     findPath(maze: IMaze): IPosition[] {
         var graph = this.extractAStarGraphFromMaze(maze);
         var start = graph.grid[maze.start.rawPos][maze.start.colPos];

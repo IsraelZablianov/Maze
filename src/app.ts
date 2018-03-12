@@ -1,13 +1,11 @@
-///<reference path="../_references.d.ts"/>
-
-'use strict';
+declare var angular: any;
+import { StateNames, SuccessStateParams } from "../src/constants/state-names";
 
 const settings = Object.freeze({
     appName: "Maze"
 });
 
 const app = angular.module(settings.appName, ['ui.router', 'colorpicker.module']);
-
 app.config(["$stateProvider", "$urlRouterProvider",
     ($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider) => {
 
@@ -30,3 +28,5 @@ app.config(["$stateProvider", "$urlRouterProvider",
         });
     }
 ]);
+
+export default app;

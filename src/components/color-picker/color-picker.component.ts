@@ -1,4 +1,7 @@
-///<reference path="../../../_references.d.ts"/>
+import { ServicesNames } from "../../constants/services-names";
+import { StateNames } from "../../constants/state-names";
+import app from "../../app";
+import { IColorService } from "../../services/color/color.service";
 
 interface IColorPickerController {
     save(): void;
@@ -36,6 +39,14 @@ class ColorPickerController implements IColorPickerController {
 app.component("colorPicker", {
     controller: ColorPickerController,
     templateUrl: "src/components/color-picker/color-picker.component.html",
+    bindings: {
+    }
+});
+
+
+app.component("success", {
+    controller: SuccessController,
+    templateUrl: "src/components/success/success.component.html",
     bindings: {
     }
 });

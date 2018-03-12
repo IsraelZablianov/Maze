@@ -1,13 +1,14 @@
-///<reference path="../../../_references.d.ts"/>
+import app from "../../app";
+import { ServicesNames } from "../../constants/services-names";
 
-interface IColorService {
+export interface IColorService {
     isHex(hex: string): boolean;
     regularColor: string;
     forbiddenColor: string;
     routeColor: string;
 }
 
-class ColorService implements IColorService {
+export class ColorService implements IColorService {
     private _regularColor: string = "#36ec51";
     private _forbiddenColor: string = "#000";
     private _routeColor: string = "#303aff";
